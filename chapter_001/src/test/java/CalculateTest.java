@@ -7,12 +7,12 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 /**
-* Test.
-*
-* @author Alexander Molodid (mailto:a.molodid@gmail.com)
-* @version $Id$
-* @since 0.1
-*/
+ * Test.
+ *
+ * @author Alexander Molodid (mailto:a.molodid@gmail.com)
+ * @version $Id$
+ * @since 0.1
+ */
 public class CalculateTest {
 /**
 * Test add.
@@ -29,7 +29,7 @@ public class CalculateTest {
 					"Hello world%s",
 					System.getProperty("line.separator")
 				)
-			)	
+			)
 		);
 	}
 }
