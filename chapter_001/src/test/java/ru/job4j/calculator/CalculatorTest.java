@@ -30,7 +30,7 @@ public class CalculatorTest {
 * Test subtract.
 */
 	@Test
-    public void whenAddOneMinusOneThenTwo() {
+    public void whenSubtractOneFromFourThenThree() {
         Calculator calc = new Calculator();
         calc.subtract(4D, 1D);
         double result = calc.getResult();
@@ -42,7 +42,7 @@ public class CalculatorTest {
 * Test div.
 */
 	@Test
-    public void whenAddOneDivOneThenTwo() {
+    public void whenDivideSixByThreeThenTwo() {
         Calculator calc = new Calculator();
         calc.div(6D, 3D);
         double result = calc.getResult();
@@ -54,7 +54,7 @@ public class CalculatorTest {
 * Test multiple.
 */
 	@Test
-    public void whenAddOneMultipleOneThenTwo() {
+    public void whenMultipleThreeAndThreeThenNine() {
         Calculator calc = new Calculator();
         calc.multiple(3D, 3D);
         double result = calc.getResult();
