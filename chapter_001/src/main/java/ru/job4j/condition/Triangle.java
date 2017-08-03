@@ -1,0 +1,35 @@
+package ru.job4j.condition;
+
+/**
+ * Square of Triangle.
+ *
+ * @author Alexander Molodid (a.molodid@gmail.com)
+ * @version $Id$
+ * @since 0.1
+ */
+
+public class Triangle {
+    private Point a;
+    private Point b;
+    private Point c;
+
+    public Triangle(Point a, Point b, Point c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    /**
+     * Вычисление площади треугольника.
+     * Вопспользуемся формулой sqr = ((x1-x3)(y2-y3)-(x2-x3)(y1-y3))/2
+     *
+     * @return возращает значение площади треугольника
+     */
+    public double area() {
+        double sqr = Math.abs((((a.getX() - c.getX()) * (b.getY() - c.getY()) - (b.getX() - c.getX()) * (a.getY() - c.getY())) / 2));
+        if (sqr != 0) {
+            return sqr;
+        }
+        return 0;
+    }
+}
