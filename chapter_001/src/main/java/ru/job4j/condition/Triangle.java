@@ -20,16 +20,19 @@ public class Triangle {
     }
 
     /**
-     * Вычисление площади треугольника.
+     * Вычисление площади треугольника. Старое решение.
      * Вопспользуемся формулой sqr = ((x1-x3)(y2-y3)-(x2-x3)(y1-y3))/2
      *
      * @return возращает значение площади треугольника
      */
     public double area() {
-        double sqr = Math.abs((((a.getX() - c.getX()) * (b.getY() - c.getY()) - (b.getX() - c.getX()) * (a.getY() - c.getY())) / 2));
-        if (sqr != 0) {
-            return sqr;
-        }
-        return 0;
+        double ab = a.distance(b);
+        double ac = a.distance(c);
+        double bc = b.distance(c);
+        double p = (ab + ac + bc) / 2;
+        if (ab + ac <= bc || ab + bc <= ac || bc + ac <= ab)
+            return -1;
+        else
+            return Math.sqrt(p * (p - ab) * (p - ac) * (p - bc));
     }
 }
