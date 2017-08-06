@@ -10,7 +10,7 @@ package ru.job4j.max;
 
 public class Max {
     /**
-     * Метод определение наибольшего числа.
+     * Метод определение наибольшего числа их двух.
      * @param a - первое число.
      * @param b - второе число.
      * @return - возврат значения.
@@ -19,4 +19,14 @@ public class Max {
 
         return (a <= b ? b : a);
     }
+	/**
+     * Метод определение наибольшего числа их трёх.
+     * @param a - первое число.
+     * @param b - второе число.
+	 * @param c - третье число.
+     * @return - возврат значения.
+     */
+	public int max(int a, int b, int c) {
+		return max(max(a, b), c);
+		}
 }

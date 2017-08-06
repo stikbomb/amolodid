@@ -23,4 +23,13 @@ public class MaxTest {
         int result = maxim.max(1, 3);
         assertThat(result, is(3));
     }
-}
+
+	/**
+	* Test add.
+	*/
+@Test
+    public void whenFirstIsMaxOfThree() {
+        Max maxim = new Max();
+        int result = maxim.max(6, 3, 2);
+        assertThat(result, is(6));
+    }}
