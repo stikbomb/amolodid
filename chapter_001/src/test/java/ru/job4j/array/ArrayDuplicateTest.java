@@ -37,7 +37,7 @@ public class ArrayDuplicateTest {
         ArrayDuplicate newAD = new ArrayDuplicate();
         String[] array = {"Маша", "Ира", "Ира", "Ира", "Женя", "Женя", "Женя", "Жанна", "Маша", "Маша", "Ира"};
         String[] resultArray = newAD.remove(array);
-        String[] expectedArray = {"Маша", "Ира", "Женя", "Жанна"};
+        String[] expectedArray = {"Маша", "Ира", "Жанна", "Женя"};
         assertThat(resultArray, is(expectedArray));
     }
 }
