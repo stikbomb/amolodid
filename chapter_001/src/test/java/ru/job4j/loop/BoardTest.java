@@ -6,7 +6,19 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+/**
+ * Test.
+ *
+ * @author Alexander Molodid (a.molodid@gmail.com)
+ * @version $Id$
+ * @since 0.1
+ */
+
 public class BoardTest {
+
+    /**
+     Test added.
+     */
     @Test
     public void whenPaintBoardWithWidthThreeAndHeightThreeThenStringWithThreeColsAndThreeRows() {
         Board board = new Board();
@@ -15,6 +27,10 @@ public class BoardTest {
         String expected = String.format("x  x%s  x  %sx  x%s", line, line, line);
         assertThat(result, is(expected));
     }
+
+    /**
+     Test added.
+     */
     @Test
     public void whenPaintBoardWithWidthFiveAndHeightFourThenStringWithFiveColsAndFourRows() {
         Board board = new Board();

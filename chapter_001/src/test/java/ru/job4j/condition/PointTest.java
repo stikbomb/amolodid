@@ -17,10 +17,10 @@ public class PointTest {
 	/**
 	* Test add.
 	*/
-@Test
+    @Test
     public void whenConditionTrue() {
         Point point = new Point(2, 10);
-        boolean result = point.is(3,4);
+        boolean result = point.is(3, 4);
         assertThat(result, is(true));
     }
 }

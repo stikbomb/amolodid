@@ -32,4 +32,5 @@ public class MaxTest {
         Max maxim = new Max();
         int result = maxim.max(6, 3, 2);
         assertThat(result, is(6));
-    }}
+    }
+}

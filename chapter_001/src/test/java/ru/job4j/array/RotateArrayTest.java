@@ -5,7 +5,19 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+/**
+ * Test.
+ *
+ * @author Alexander Molodid (a.molodid@gmail.com)
+ * @version $Id$
+ * @since 0.1
+ */
+
 public class RotateArrayTest {
+
+    /**
+    Test added.
+     */
     @Test
     public void whenRotateTwoRowTwoColArrayThenRotatedArray() {
         //тест, проверяющий поворот массива размером 2 на 2.
@@ -16,6 +28,9 @@ public class RotateArrayTest {
         assertThat(resultArray, is(expectArray));
     }
 
+    /**
+    Test added.
+     */
     @Test
     public void whenRotateThreeRowThreeColArrayThenRotatedArray() {
         //тест, проверяющий поворот массива размером 3 на 3.
@@ -26,6 +41,9 @@ public class RotateArrayTest {
         assertThat(resultArray, is(expectArray));
     }
 
+    /**
+    Test added.
+     */
     @Test
     public void whenRotateFiveRowFiveColArrayThenRotatedArray() {
         //тест, проверяющий поворот массива размером 5 на 5.

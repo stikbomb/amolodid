@@ -12,6 +12,12 @@ import java.util.Arrays;
  */
 
 public class ArrayDuplicate {
+
+    /**
+     * Удаляет из массива элементы, повторяющиеся несколько раз.
+     * @param array - исходный массив
+     * @return - возращаемый массив
+     */
     public String[] remove(String[] array) {
         //считает количество переставленных значений, которые будут удалены из финального массива
         int index = 0;
@@ -35,5 +41,3 @@ public class ArrayDuplicate {
         return Arrays.copyOf(array, array.length - index);
     }
 }
-
-

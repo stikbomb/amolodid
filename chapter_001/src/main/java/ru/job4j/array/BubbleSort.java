@@ -1,7 +1,7 @@
 package ru.job4j.array;
 
 /**
- * Программа для сортировки массива методом перестановки
+ * Программа для сортировки массива методом перестановки.
  *
  * @author Alexander Molodid (a.molodid@gmail.com)
  * @version $Id$
@@ -9,6 +9,11 @@ package ru.job4j.array;
  */
 
 public class BubbleSort {
+    /**
+     * Сортирует передаваемый в него массив методом "пузырька".
+     * @param array - входящий массив
+     * @return - возвращает массив после сортировки
+     */
     public int[] sort(int[] array) {
         //внешний цикл отвечает за количество "проходов"
         for (int i = array.length - 1; i >= 1; i--) {

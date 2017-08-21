@@ -5,7 +5,18 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+/**
+ * Test.
+ *
+ * @author Alexander Molodid (a.molodid@gmail.com)
+ * @version $Id$
+ * @since 0.1
+ */
+
 public class PaintTest {
+    /**
+     Test added.
+     */
     @Test
     public void whenPiramidWithHeightTwoThenStringWithTwoRows() {
         Paint paint = new Paint();
@@ -15,6 +26,9 @@ public class PaintTest {
         assertThat(result, is(expected));
     }
 
+    /**
+     Test added.
+     */
     @Test
     public void whenPiramidWithHeightThreeThenStringWithThreeRows() {
         Paint paint = new Paint();

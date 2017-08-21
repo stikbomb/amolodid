@@ -1,7 +1,7 @@
 package ru.job4j.loop;
 
 /**
- * Вычисление факториала заданного числа
+ * Рисование шахматной доски заданных размеров.
  *
  * @author Alexander Molodid (a.molodid@gmail.com)
  * @version $Id$
@@ -9,8 +9,18 @@ package ru.job4j.loop;
  */
 
 public class Board {
-    StringBuilder builder = new StringBuilder();
 
+    /**
+     * Создаёт новый класс StringBuilder.
+     */
+    private StringBuilder builder = new StringBuilder();
+
+    /**
+     * Рисует шахматную доску заданных размеров.
+     * @param width - ширина доски
+     * @param height - высота доски
+     * @return - возвращает массив в виде строки
+     */
     public String paint(int width, int height) {
         for (int index2 = 1; index2 <= height; index2++) {
 
@@ -21,7 +31,6 @@ public class Board {
                     } else {
                         builder.append("  ");
                     }
-
                 }
                 builder.append(System.getProperty("line.separator"));
 
@@ -32,7 +41,6 @@ public class Board {
                     } else {
                         builder.append("x");
                     }
-
                 }
                 builder.append(System.getProperty("line.separator"));
             }

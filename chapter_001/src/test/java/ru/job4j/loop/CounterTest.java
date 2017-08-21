@@ -14,6 +14,7 @@ import static org.junit.Assert.assertThat;
  */
 
 public class CounterTest {
+
     /**
      * Test add.
      */

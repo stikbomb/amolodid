@@ -9,10 +9,28 @@ package ru.job4j.condition;
  */
 
 public class Triangle {
+
+    /**
+     * Поле точка А.
+     */
     private Point a;
+
+    /**
+     * Поле точка В.
+     */
     private Point b;
+
+    /**
+     * Поле точка С.
+     */
     private Point c;
 
+    /**
+     * Сохраняет координаты вершин треугольника.
+     * @param a - точка А
+     * @param b - точка В
+     * @param c - точка С
+     */
     public Triangle(Point a, Point b, Point c) {
         this.a = a;
         this.b = b;
@@ -30,9 +48,10 @@ public class Triangle {
         double ac = a.distance(c);
         double bc = b.distance(c);
         double p = (ab + ac + bc) / 2;
-        if (ab + ac <= bc || ab + bc <= ac || bc + ac <= ab)
+        if (ab + ac <= bc || ab + bc <= ac || bc + ac <= ab) {
             return -1;
-        else
+        } else {
             return Math.sqrt(p * (p - ab) * (p - ac) * (p - bc));
+        }
     }
 }

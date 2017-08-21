@@ -15,7 +15,7 @@ public class Max {
      * @param b - второе число.
      * @return - возврат значения.
      */
-    public int max(int a, int b){
+    public int max(int a, int b) {
 
         return (a <= b ? b : a);
     }

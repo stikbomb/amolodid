@@ -1,7 +1,7 @@
 package ru.job4j.loop;
 
 /**
- * Подсчёт суммы чётных чисел в диапазоне
+ * Подсчёт суммы чётных чисел в диапазоне.
  *
  * @author Alexander Molodid (a.molodid@gmail.com)
  * @version $Id$
@@ -10,7 +10,7 @@ package ru.job4j.loop;
 
 public class Counter {
     /**
-     * Вычисляет сумму чётных чисел в заданном диапазоне
+     * Вычисляет сумму чётных чисел в заданном диапазоне.
      * @param start - минимальное значение диапазона
      * @param finish - максимальное значение диапазона
      * @return sum - возвращает сумму

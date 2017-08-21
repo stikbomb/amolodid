@@ -5,7 +5,19 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+/**
+ * Test.
+ *
+ * @author Alexander Molodid (a.molodid@gmail.com)
+ * @version $Id$
+ * @since 0.1
+ */
+
 public class TurnTest {
+
+    /**
+    Test added.
+     */
     @Test
     public void whenTurnArrayWithEvenAmountOfElementsThenTurnedArray() {
         //напишите здесь тест, проверяющий переворот массива с чётным числом элементов, например {2, 6, 1, 4}.
@@ -16,6 +28,9 @@ public class TurnTest {
         assertThat(resultArray, is(expectArray));
     }
 
+    /**
+    Test added.
+     */
     @Test
     public void whenTurnArrayWithOddAmountOfElementsThenTurnedArray() {
         //напишите здесь тест, проверяющий переворот массива с нечётным числом элементов, например {1, 2, 3, 4, 5}.

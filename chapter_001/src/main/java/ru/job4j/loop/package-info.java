@@ -1,11 +1,12 @@
 /**
  * //TODO add comments.
  *
- * Пакет с примерами работы с массивами.
+ * Пакет с примерами работы с циклами.
  *
  * @author Alexander Molodid (a.molodid@gmail.com)
  * @version $Id$
  * @since 0.1
  */
 
-package ru.job4j.array;
+
+package ru.job4j.loop;

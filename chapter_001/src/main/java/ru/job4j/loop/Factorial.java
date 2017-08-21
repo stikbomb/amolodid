@@ -1,7 +1,7 @@
 package ru.job4j.loop;
 
 /**
- * Вычисление факториала заданного числа
+ * Вычисление факториала заданного числа.
  *
  * @author Alexander Molodid (a.molodid@gmail.com)
  * @version $Id$
@@ -9,8 +9,14 @@ package ru.job4j.loop;
  */
 
 public class Factorial {
-    public int calc(int n){
-        if (n == 0){
+
+    /**
+     * Вычисляет факториал заданного числа.
+     * @param n - задаваемое число
+     * @return - возврат факториала
+     */
+    public int calc(int n) {
+        if (n == 0) {
             return 1;
         }
         int factorial = 1;

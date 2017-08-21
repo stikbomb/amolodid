@@ -1,7 +1,7 @@
 package ru.job4j.loop;
 
 /**
- * Построение пирамиды по заданной высоте
+ * Построение пирамиды по заданной высоте.
  *
  * @author Alexander Molodid (a.molodid@gmail.com)
  * @version $Id$
@@ -9,8 +9,17 @@ package ru.job4j.loop;
  */
 
 public class Paint {
-    StringBuilder builder = new StringBuilder();
 
+    /**
+     * Создаёт новый объект класса StringBuilder.
+     */
+    private StringBuilder builder = new StringBuilder();
+
+    /**
+     * Рисует пирамиду заданной высота.
+     * @param h - высота пирамиды
+     * @return - массив в виде строки
+     */
     public String piramid(int h) {
 
         for (int i = 1; i <= h; i++) {

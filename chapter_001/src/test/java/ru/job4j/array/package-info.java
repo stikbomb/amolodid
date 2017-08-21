@@ -1,7 +1,7 @@
 /**
  * //TODO add comments.
  *
- * Пакет с примерами работы с массивами.
+ * Пакет с примерами работы с массивами - тесты.
  *
  * @author Alexander Molodid (a.molodid@gmail.com)
  * @version $Id$
