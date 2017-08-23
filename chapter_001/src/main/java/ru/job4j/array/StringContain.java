@@ -26,27 +26,26 @@ public class StringContain {
         char[] originArray = origin.toCharArray();
         char[] subArray = sub.toCharArray();
         //сравниваем все символы из исходной строки с первым символом подстроки
-        for (int i = 0; i <= originArray.length - subArray.length + 1; i++) {
-            //если число совпавших символов меньше длины подстроки, проверяем дальше
-            if (index < subArray.length) {
-                //если первый символ подстроки совпал с символом из исходной строки,
-                //запускаем проверку всех символов подстроки
-                if (subArray[0] == originArray[i]) {
-                    int k = i;
-                    for (int j = 0; j < subArray.length; j++) {
-                        if (subArray[j] == originArray[k]) {
-                            index++;
-                            k++;
-                        } else {
-                            index = 0;
-                        }
+        for (int i = 0; i <= originArray.length - subArray.length; i++) {
+            //если первый символ подстроки совпал с символом из исходной строки,
+            // запускаем проверку всех символов подстроки
+            if (subArray[0] == originArray[i]) {
+                for (int j = 0; j < subArray.length; j++) {
+                    if (subArray[j] == originArray[i]) {
+                        index++;
+                        i++;
+                    } else {
+                        //если один их элементов не прошёл проверку - обнуляем index,
+                        //возвращаем исходное значение i, продолжаем проверку
+                        i -= index;
+                        index = 0;
                     }
                 }
-                //если число совпавших подряд символов равно длине подстроки, возвращаем TRUE и выходим из цикла
-            } else if (index == subArray.length) {
-                contain = true;
-                break;
             }
+        }
+        //если число совпавших подряд символов равно длине подстроки, возвращаем TRUE
+        if (index == subArray.length) {
+            contain = true;
         }
         return contain;
     }

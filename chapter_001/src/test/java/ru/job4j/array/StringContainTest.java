@@ -61,13 +61,27 @@ public class StringContainTest {
     Test added.
      */
     @Test
-    public void whenOriginStringContainSubStringThenTrueFiniteCondition() {
+    public void whenOriginStringContainSubStringThenTrueFiniteCondition1() {
         //тест, проверяющий содержание одной строки в другой
         StringContain newSC = new StringContain();
-        String origin = "привекииививелдивет";
-        String sub = "ивет";
+        String origin = "привет";
+        String sub = "вет";
         boolean result = newSC.contains(origin, sub);
         boolean expect = true;
+        assertThat(result, is(expect));
+    }
+
+    /**
+     Test added.
+     */
+    @Test
+    public void whenOriginStringContainSubStringThenTrueFiniteCondition2() {
+        //тест, проверяющий содержание одной строки в другой
+        StringContain newSC = new StringContain();
+        String origin = "привет";
+        String sub = "вети";
+        boolean result = newSC.contains(origin, sub);
+        boolean expect = false;
         assertThat(result, is(expect));
     }
 }
