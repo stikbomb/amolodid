@@ -7,25 +7,20 @@ package ru.job4j;
 
 public class Item {
 
-    /**
-     * Содержит в себе уникальный ID элемента.
-     */
+    /** Содержит в себе уникальный ID элемента. */
     private String id;
 
-    /**
-     * Содержит в себе имя элемента.
-     */
+    /**Содержит в себе имя элемента.*/
     private String name;
 
-    /**
-     * Содержит в себя описание элемента.
-     */
+    /** Содержит в себя описание элемента. */
     private String description;
 
-    /**
-     * Содержит в себе время создания элемента.
-     */
+    /** Содержит в себе время создания элемента. */
     private long create;
+
+    /** Содержит время последнего изменения элемента. */
+    private long update;
 
     /**
      * Конструктор, применяемый при создании элемента.
@@ -37,6 +32,22 @@ public class Item {
     this.name = name;
     this.description = description;
     this.create = create;
+    }
+
+    /**
+     * Еще один конструктор, для правки заявок.
+     * @param id - id заявки
+     * @param name - имя заявки
+     * @param description - описание заявки
+     * @param create - дата создания заявки
+     * @param update - дата последнего изменения заявка
+     */
+    Item(String id, String name, String description, long create, long update) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.create = create;
+        this.update = update;
     }
 
     /**
@@ -77,5 +88,29 @@ public class Item {
      */
     long getCreate() {
         return this.create;
+    }
+
+    /**
+     * Обычный сеттер.
+     * @param date - устанавливает дату создания элемента
+     */
+    void setCreate(long date) {
+            this.create = date;
+    }
+
+    /**
+     * Обычный геттер.
+     * @return - возрвщает дату последнего изменения элемента
+     */
+    long getUpdate() {
+        return this.update;
+    }
+
+    /**
+     * обычный сеттер.
+     * @param date - устанавливает дату последнего изменения элемента
+     */
+    void setUpdate(long date) {
+        this.update = date;
     }
 }

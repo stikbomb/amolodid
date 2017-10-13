@@ -53,18 +53,23 @@ public class Tracker {
      * @param item - заявка.
      */
     public void delete(Item item) {
-        for (int i = 0; i != position; i++) {
-            if (items[i].getId().equals(item.getId())) {
-                System.arraycopy(items, i + 1, items, i, position - i - 1);
-                //делаем декремент номеру позиции, чтобы корректно раболи остальные методы
-                position--;
+        if (items[position - 1].getId().equals(item.getId())) {
+            System.arraycopy(items, 0, items, 0, position - 1);
+            position--;
+            return;
+        } else {
+            for (int i = 0; i < position - 1; i++) {
+                if (items[i].getId().equals(item.getId())) {
+                    System.arraycopy(items, i + 1, items, i, position - i - 1);
+                    //делаем декремент номеру позиции, чтобы корректно работали остальные методы
+                    position--;
+                }
             }
         }
     }
 
     /**
      * Формирует новый массив из всех элементов, не равных null.
-     * П
      * @return - новый массив.
      */
     public Item[] findAll() {
@@ -94,6 +99,9 @@ public class Tracker {
                 j++;
             }
         }
+        if (j == 0) {
+            System.out.println("Item with this name was not found. Try again.");
+        }
         return Arrays.copyOf(result, j);
     }
 
@@ -114,10 +122,11 @@ public class Tracker {
     }
 
     /**
-     * Генерирует случайный ID.
+     * Генерирует случайный ID. Длина ID уменьшена для удобства разработки и тестирования.
+     * При необходимости верну прежнее значение.
      * @return - возвращает уникальный ID.
      */
     String generateId() {
-        return String.valueOf(System.currentTimeMillis() + RN.nextInt());
+        return String.valueOf((System.currentTimeMillis() + RN.nextInt()) / 999999);
     }
 }
