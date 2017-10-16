@@ -29,12 +29,25 @@ public class StartUI {
     /** Интерфейс. */
     private Input input;
 
+    /** Трекер. */
+    private Tracker tracker;
+
     /**
      * Запуск оболочки.
      * @param input - интерфейс
      */
     public StartUI(Input input) {
         this.input = input;
+    }
+
+    /**
+     * Запуск оболочки.
+     * @param input - интерфейс
+     * @param tracker - трекер
+     */
+    public StartUI(Input input, Tracker tracker) {
+        this.input = input;
+        this.tracker = tracker;
     }
 
     /**
@@ -146,7 +159,6 @@ public class StartUI {
     public void init() {
         printWelcome();
         System.out.println();
-        Tracker tracker = new Tracker();
         String answer = null;
         while (!EXIT.equals(answer)) {
             printMenu();
@@ -171,10 +183,11 @@ public class StartUI {
                     this.findItemsByName(input, tracker);
                     break;
                 default:
-                    System.out.println("Wrong answer. Try again.");
+                    break;
             }
         }
         if (EXIT.equals(answer)) {
+            System.out.println();
             System.out.println("See you soon, my little friend!");
         }
     }
