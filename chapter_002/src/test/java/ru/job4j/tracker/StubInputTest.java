@@ -1,4 +1,4 @@
-package ru.job4j;
+package ru.job4j.tracker;
 
 import org.junit.Test;
 
@@ -22,7 +22,7 @@ public class StubInputTest {
      */
     @Test
     public void whenUserAddItemThenTrackerHasNewItemWithSameName() {
-        Tracker tracker = new Tracker();     // создаём Tracker
+        Tracker tracker = new Tracker();     // создаём tracker
         Input input = new StubInput(new String[]{"1", "test name", "desc", "2", "0"});   //создаём StubInput с последовательностью действий
         new StartUI(input, tracker).init();     //   создаём StartUI и вызываем метод init()
         assertThat(tracker.findAll()[0].getName(), is("test name")); // проверяем, что нулевой элемент массива в трекере содержит имя, введённое при эмуляции.
@@ -35,7 +35,7 @@ public class StubInputTest {
      */
     @Test
     public void whenUpdateThenTrackerHasUpdatedValue() {
-        // создаём Tracker
+        // создаём tracker
         Tracker tracker = new Tracker();
         //Напрямую добавляем заявку
         Item item = tracker.add(new Item("TestNAme", "TestDes", 1234123L));
@@ -54,7 +54,7 @@ public class StubInputTest {
      */
     @Test
     public void whenDeleteItemThenCheckIt() {
-        // создаём Tracker
+        // создаём tracker
         Tracker tracker = new Tracker();
         //Напрямую добавляем 4 заявки
         Item item0 = tracker.add(new Item("TestNAme0", "TestDes", 1234123L));
@@ -77,7 +77,7 @@ public class StubInputTest {
      */
     @Test
     public void whenFindItemByIdThenCheckIt() {
-        // создаём Tracker
+        // создаём tracker
         Tracker tracker = new Tracker();
         //Напрямую добавляем заявку
         Item item0 = tracker.add(new Item("TestNAme0", "TestDes", 1234123L));
@@ -98,7 +98,7 @@ public class StubInputTest {
      */
     @Test
     public void whenFindItemsByNameThenCheckIt() {
-        // создаём Tracker
+        // создаём tracker
         Tracker tracker = new Tracker();
         //Напрямую добавляем заявку
         Item item0 = tracker.add(new Item("TestNAme0", "TestDes", 1234123L));
@@ -124,7 +124,7 @@ public class StubInputTest {
      */
     @Test
     public void whenShowAllItamsThenCheckIt() {
-        // создаём Tracker
+        // создаём tracker
         Tracker tracker = new Tracker();
         //Напрямую добавляем заявку
         Item item0 = tracker.add(new Item("TestNAme0", "TestDes", 1234123L));

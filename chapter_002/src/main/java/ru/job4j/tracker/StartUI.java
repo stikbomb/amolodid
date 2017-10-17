@@ -1,4 +1,4 @@
-package ru.job4j;
+package ru.job4j.tracker;
 
 /**
  *
@@ -203,7 +203,7 @@ public class StartUI {
 
     /** Выводит приветствие. */
     public void printWelcome() {
-        System.out.println("Hello, my little friend! Let's call me Master of Tracker!");
+        System.out.println("Hello, my little friend! Let's call me Master of tracker!");
     }
     /** Выводит меню. */
     public void printMenu() {
