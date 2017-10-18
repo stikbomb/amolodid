@@ -5,8 +5,6 @@ package ru.job4j.strategy;
  */
 public class Paint {
 
-    /** Определяет стратегию. */
-    private Shape shape;
 
     /**
      * Прорисовывает фигуру в зависимости от параметра.
@@ -14,7 +12,6 @@ public class Paint {
      * @return - возвращает отформатированную строку псевдографики.
      */
     public String draw(Shape shape) {
-        this.shape = shape;
         return shape.pic();
     }
 }
