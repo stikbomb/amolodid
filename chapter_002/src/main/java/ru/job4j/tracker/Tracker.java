@@ -56,7 +56,6 @@ public class Tracker {
         if (items[position - 1].getId().equals(item.getId())) {
             System.arraycopy(items, 0, items, 0, position - 1);
             position--;
-            return;
         } else {
             for (int i = 0; i < position - 1; i++) {
                 if (items[i].getId().equals(item.getId())) {
@@ -126,7 +125,7 @@ public class Tracker {
      * При необходимости верну прежнее значение.
      * @return - возвращает уникальный ID.
      */
-    String generateId() {
+    private String generateId() {
         return String.valueOf((System.currentTimeMillis() + RN.nextInt()) / 999999);
     }
 }

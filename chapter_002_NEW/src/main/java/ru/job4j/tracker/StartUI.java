@@ -7,6 +7,12 @@ package ru.job4j.tracker;
 public class StartUI {
 
     /**
+     * Допустимые ответы.
+     */
+    private int[] ranges = new int[] {0, 1, 2, 3, 4, 5};
+
+
+    /**
      * Получение данных от пользователя.
      */
     private final Input input;
@@ -21,7 +27,7 @@ public class StartUI {
      * @param tracker - трекер
      * @param input - ввод данных
      */
-    public StartUI(Tracker tracker, Input input) {
+    public StartUI(Input input, Tracker tracker) {
         this.input = input;
         this.tracker = tracker;
     }
@@ -37,16 +43,7 @@ public class StartUI {
         do {
             menu.show();
             System.out.println();
-            try {
-                int key = Integer.valueOf(input.ask("Select: "));
-                if (key <= 5 && key >= 0) {
-                    menu.select(key);
-                } else {
-                    System.out.println("Wrong choice, please try again.");
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Wrong choice, please try again.");
-            }
+            int key = input.ask("Select: ", ranges);
         } while (!"Y".equals(this.input.ask("Exit? (Y or N)")));
     }
 
@@ -56,6 +53,11 @@ public class StartUI {
      * @param args - стандартный аргумент
      */
     public static void main(String[] args) {
-        new StartUI(new Tracker(), new ConsoleInput()).init();
+        new StartUI(
+                new ValidateInput(
+                        new ConsoleInput()
+                ),
+                new Tracker()
+        ).init();
     }
 }

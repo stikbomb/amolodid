@@ -17,7 +17,8 @@
 		<module>chapter_001</module>
         <module>professions</module>
         <module>chapter_002</module>
-	</modules>
+        <module>chapter_002_NEW</module>
+    </modules>
 	
 	<dependencies>
         <dependency>
