@@ -44,6 +44,7 @@ public class StartUI {
             menu.show();
             System.out.println();
             int key = input.ask("Select: ", ranges);
+            menu.select(key);
         } while (!"Y".equals(this.input.ask("Exit? (Y or N)")));
     }
 
